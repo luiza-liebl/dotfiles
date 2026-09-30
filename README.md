@@ -39,11 +39,11 @@ pulling updates back.
 
 Before the first run, in your fork:
 
-- [ ] `configs/git/gitconfig` — `name` and `email`.
-- [ ] `configs/git/work.gitconfig` — work `email`, used inside `~/Work/`.
-- [ ] `configs/nix-darwin/flake.nix` — the `hosts` entry: key is
+- [X] `configs/git/gitconfig` — `name` and `email`.
+- [X] `configs/git/work.gitconfig` — work `email`, used inside `~/Work/`.
+- [X] `configs/nix-darwin/flake.nix` — the `hosts` entry: key is
   `scutil --get LocalHostName`, `username` is `whoami`.
-- [ ] `configs/nix-darwin/homebrew.nix` — trim `brews`/`casks` to what you
+- [X] `configs/nix-darwin/homebrew.nix` — trim `brews`/`casks` to what you
   use. **Careful:** `cleanup = "zap"` uninstalls every Homebrew package not
   listed there, app data included, on each `darwin-rebuild switch`.
 
@@ -52,8 +52,8 @@ Before the first run, in your fork:
 On a fresh macOS machine:
 
 ```sh
-DOTFILES_REPO=https://github.com/<you>/dotfiles.git \
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/<you>/dotfiles/main/scripts/bootstrap.sh)"
+DOTFILES_REPO=https://github.com/luiza-liebl/dotfiles.git \
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/luiza-liebl/dotfiles/main/scripts/bootstrap.sh)"
 ```
 
 See [`scripts/bootstrap.sh`](scripts/bootstrap.sh) for what that actually
